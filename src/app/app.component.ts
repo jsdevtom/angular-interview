@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-interview';
+
+  navigationItems = [
+    {text: 'Hotels', link: './hotels'},
+  ]
+
+  constructor() {
+  }
+
+  onSuperUserModeClick() {
+    this.navigationItems.push(
+      {text: 'Users', link: './users'},
+    );
+  }
 }
